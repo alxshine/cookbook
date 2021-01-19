@@ -12,3 +12,6 @@ RUN apt-get -qq update && apt-get -qq -y install bzip2 curl \
     && apt-get autoclean \
     && rm -rf /var/lib/apt/lists/* /var/log/dpkg.log \
     && conda clean --all --yes
+
+# by creating a dev user I can directly use this image in devcontainers
+RUN adduser --disabled-password --gecos "" --no-create-home dev
