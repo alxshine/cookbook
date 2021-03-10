@@ -1,0 +1,13 @@
+{
+    "dockerFile": "Dockerfile",
+    "context": ".",
+	"containerUser": "dev",
+	"extensions": [
+		"james-yu.latex-workshop",
+		"streetsidesoftware.code-spell-checker",
+		"eamodio.gitlens",
+		"gruntfuggly.todo-tree"
+	],
+	"mounts": ["type=bind,src=${localEnv:HOME}/.ssh,dst=/home/dev/.ssh"],
+	"settings": {"latex-workshop.latex.outDir": "%DIR%/_build"}
+}
