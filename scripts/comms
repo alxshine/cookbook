@@ -1,0 +1,10 @@
+#!/bin/env bash
+
+flatpak run org.signal.Signal &
+disown %1
+
+flatpak run com.skype.Client &
+disown %1
+
+flatpak run com.discordapp.Discord &
+disown %1
